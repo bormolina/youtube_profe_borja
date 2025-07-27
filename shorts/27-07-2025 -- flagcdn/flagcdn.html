@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>FlagCDN Demo</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/vs2015.min.css">
+  <style>
+    body {
+      background-color: #fff;
+      color: #00ff00;
+      font-family: monospace;
+      padding: 40px;
+      text-align: center;
+    }
+    .flags {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+    .flags img {
+      width: 60px;
+      height: auto;
+      cursor: pointer;
+      padding: 1rem;
+      transition: transform 0.3s;
+    }
+    .flags img:hover {
+      transform: scale(1.1);
+    }
+    .message {
+      font-size: 1.2em;
+      background: rgba(0, 0, 0, 0.9);
+      border: 1px solid #00ff00;
+      border-radius: 8px;
+      padding: 20px;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+
+<div class="flags">
+  <img src="https://flagcdn.com/w1280/ar.png" alt="Bandera de España" onclick="setLang('es')">
+  <img src="https://flagcdn.com/w1280/it.png" alt="Bandera del Reino Unido" onclick="setLang('en')">
+</div>
+
+<div class="message" id="mensaje">
+  Si tienes que insertar banderas en tu página web no tienes que descargarlas, usa FlagCDN y ten acceso a todas las banderas de forma gratuita y sin tener que descargar nada.
+</div>
+
+<script>
+  const mensajes = {
+    es: "Si tienes que insertar banderas en tu página web no tienes que descargarlas, usa FlagCDN y ten acceso a todas las banderas de forma gratuita y sin tener que descargar nada.",
+    en: "If you need to insert flags on your website, you don't need to download them. Use FlagCDN and access all flags for free without downloading anything."
+  }
+
+  function setLang(lang) {
+    const mensaje = document.getElementById("mensaje")
+    mensaje.textContent = mensajes[lang] || mensajes['es']
+  }
+</script>
+
+</body>
+</html>

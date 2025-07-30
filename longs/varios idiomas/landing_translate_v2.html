@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Otra landing más</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/sakura.css/css/sakura.css" type="text/css">
+  <style>
+    .flags {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .flags img {
+      width: 32px;
+      height: auto;
+      cursor: pointer;
+    }
+
+    .contenido {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+
+    .texto {
+      flex: 1 1 300px;
+    }
+
+    .imagen {
+      flex: 1 1 200px;
+      max-width: 200px;
+    }
+
+    #melocontoncito{
+      font-size: 14rem;
+    }
+
+    footer {
+      margin-top: 4rem;
+      font-size: 0.9rem;
+      text-align: center;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="flags">
+    <img src="https://flagcdn.com/w40/es.png" alt="Español" onclick="setLang('es')">
+    <img src="https://flagcdn.com/w40/gb.png" alt="English" onclick="setLang('en')">
+    <img src="https://flagcdn.com/w40/it.png" alt="Italiano" onclick="setLang('it')">
+    <img src="https://flagcdn.com/w40/de.png" alt="Aleman" onclick="setLang('de')">
+  </div>
+    <main>
+    <h1 id="titulo">Bienvenido a otra landing page</h1>
+    <h2 id="subtitulo">Diseñada con mimo... en 1 minuto</h2>
+
+    <div class="contenido">
+      <div class="texto">
+        <p id="parrafo">
+          He aquí oooooootra landing page. Sí, otra más. Con su título grande, su párrafo perfectamente alineado y un aire de importancia que ni un ministro. No hay nada nuevo, nada rompedor, pero oye, ¡mira qué limpio todo! Porque lo importante no es lo que ofrece, sino que tenga ese aire de "esto podría ser una startup". A veces menos es más, pero aquí menos es... exactamente igual que todas las demás.
+        </p>
+      </div>
+
+     <div class="imagen">
+        <p id="melocontoncito">🍑</p>
+      </div>
+    </div>
+
+    <section>
+      <h2 id="seccion_topillos">Los topillo son muy malos</h2>
+      <p id="texto_topillos">
+        Los topillos son malvados porque no se conforman con existir, no; conspiran. Bajo su apariencia de roedor inocente se oculta una voluntad minuciosamente destructiva: no buscan alimentarse, buscan socavar. No comen raíces por hambre, sino por el puro placer de ver cómo una planta sana, vigorosa, cultivada con esmero durante meses, se desploma de un día para otro, sin previo aviso, como si la naturaleza misma se rindiera ante su nihilismo subterráneo. Se reproducen como si quisieran conquistar el mundo por número, y lo peor es que lo están consiguiendo. Excavan túneles como si fueran ingenieros del caos, debilitando la estructura de los campos, arruinando cosechas, alterando ecosistemas… y todo ello en silencio, sin hacer ruido, como un ejército de saboteadores diminutos que atacan desde abajo, literalmente. Ni siquiera miran a los ojos, no porque no puedan, sino porque saben que su auténtico poder está en permanecer invisibles. Son la quintaesencia del mal discreto: no gritan, no muerden, no chillan… pero lo arruinan todo. Y lo saben.
+      </p>
+    </section>
+  </main>
+
+  <footer id="footer">
+    © 2025 — Otra empresa que no existe. Pero oye, si has llegado hasta aquí, igual te interesa invertir.
+  </footer>
+
+  <script>
+    const textos = {
+      es: {
+        titulo: "Bienvenido a otra landing page",
+        subtitulo: "Diseñada con mimo... en 1 minuto",
+        parrafo: "He aquí oooooootra landing page. Sí, otra más. Con su título grande, su párrafo perfectamente alineado y un aire de importancia que ni un ministro. No hay nada nuevo, nada rompedor, pero oye, ¡mira qué limpio todo! Porque lo importante no es lo que ofrece, sino que tenga ese aire de \"esto podría ser una startup\". A veces menos es más, pero aquí menos es... exactamente igual que todas las demás.",
+        footer: "© 2025 — Otra empresa que no existe. Pero oye, si has llegado hasta aquí, igual te interesa invertir.",
+        seccion_topillos: "Los topillo son muy malos",
+        texto_topillos: "Los topillos son malvados porque no se conforman con existir, no; conspiran. Bajo su apariencia de roedor inocente se oculta una voluntad minuciosamente destructiva: no buscan alimentarse, buscan socavar. No comen raíces por hambre, sino por el puro placer de ver cómo una planta sana, vigorosa, cultivada con esmero durante meses, se desploma de un día para otro, sin previo aviso, como si la naturaleza misma se rindiera ante su nihilismo subterráneo. Se reproducen como si quisieran conquistar el mundo por número, y lo peor es que lo están consiguiendo. Excavan túneles como si fueran ingenieros del caos, debilitando la estructura de los campos, arruinando cosechas, alterando ecosistemas… y todo ello en silencio, sin hacer ruido, como un ejército de saboteadores diminutos que atacan desde abajo, literalmente. Ni siquiera miran a los ojos, no porque no puedan, sino porque saben que su auténtico poder está en permanecer invisibles. Son la quintaesencia del mal discreto: no gritan, no muerden, no chillan… pero lo arruinan todo. Y lo saben."
+      },
+      en: {
+        titulo: "Welcome to yet another landing page",
+        subtitulo: "Lovingly crafted... in 1 minute",
+        parrafo: "Here we are again. Another landing page. Yes, yet another one. With its oversized heading, perfectly aligned paragraph and a self-important tone that screams ‘minimalist disruption’. There’s nothing new, nothing bold, but hey, look how clean it is! Because the goal isn’t originality — it’s to feel like maybe, just maybe, this could be a startup. Sometimes less is more, but here less is... exactly the same as always.",
+        footer: "© 2025 — Another company that doesn’t exist. But hey, if you scrolled this far, maybe you're ready to invest.",
+        seccion_topillos: "Voles are very bad",
+        texto_topillos: "Voles are evil because they are not content with merely existing; no, they conspire. Beneath their innocent rodent appearance lies a meticulously destructive will: they don’t seek to feed, they seek to undermine. They don’t eat roots out of hunger, but for the sheer pleasure of watching a healthy, vigorous plant—tended with care for months—collapse overnight, without warning, as if nature itself surrendered to their underground nihilism. They reproduce as if they intend to conquer the world by numbers—and the worst part is, they’re succeeding. They dig tunnels like chaos engineers, weakening the structure of the fields, ruining harvests, disrupting ecosystems… and they do it all in silence, without a sound, like an army of tiny saboteurs attacking from below—literally. They won’t even look you in the eye, not because they can’t, but because they know their true power lies in remaining invisible. They are the quintessence of discreet evil: they don’t scream, they don’t bite, they don’t screech… but they ruin everything. And they know it."
+      },
+      it: {
+        titulo: "Benvenuto in un'altra landing page",
+        subtitulo: "Creata con amore... in 1 minuto",
+        parrafo: "Eccoci di nuovo. Un'altra landing page. Sì, ancora una. Con il suo titolo sovradimensionato, il paragrafo perfettamente allineato e un tono pomposo che urla ‘disruption minimalista’. Non c’è niente di nuovo, niente di audace, ma guarda quanto è pulita! Perché l'obiettivo non è l'originalità — è far sembrare che, forse, proprio forse, potrebbe essere una startup. A volte meno è di più, ma qui meno è... esattamente lo stesso di sempre.",
+        footer: "© 2025 — Un’altra azienda che non esiste. Ma ehi, se sei arrivato fin qui, forse sei pronto a investire.",
+        seccion_topillos: "Le arvicole sono molto cattive",
+        texto_topillos: "Le arvicole sono malvagie perché non si accontentano semplicemente di esistere; no, tramano. Sotto il loro aspetto innocente di roditore si cela una volontà meticolosamente distruttiva: non cercano di nutrirsi, cercano di sabotare. Non mangiano radici per fame, ma per il puro piacere di vedere una pianta sana e vigorosa—curata con attenzione per mesi—collassare da un giorno all’altro, senza preavviso, come se la natura stessa si arrendesse al loro nichilismo sotterraneo. Si riproducono come se volessero conquistare il mondo con il numero—e la cosa peggiore è che ci stanno riuscendo. Scavano gallerie come ingegneri del caos, indebolendo la struttura dei campi, rovinando i raccolti, alterando gli ecosistemi… e fanno tutto in silenzio, senza un suono, come un esercito di minuscoli sabotatori che attaccano dal basso—letteralmente. Non ti guardano nemmeno negli occhi, non perché non possano, ma perché sanno che il loro vero potere sta nel rimanere invisibili. Sono la quintessenza del male discreto: non urlano, non mordono, non stridono… ma rovinano tutto. E lo sanno."
+      },
+      de:{
+        titulo: "Willkommen auf einer weiteren Landingpage",
+          subtitulo: "Liebevoll erstellt... in 1 Minute",
+          parrafo: "Da sind wir wieder. Noch eine Landingpage. Ja, schon wieder eine. Mit ihrer überdimensionierten Überschrift, dem perfekt ausgerichteten Absatz und einem selbstgefälligen Ton, der 'minimalistische Disruption' schreit. Es ist nichts Neues, nichts Mutiges, aber hey, schau mal, wie sauber sie ist! Denn das Ziel ist nicht Originalität – sondern das Gefühl, dass dies vielleicht, nur vielleicht, ein Startup sein könnte. Manchmal ist weniger mehr, aber hier ist weniger... genau dasselbe wie immer.",
+          footer: "© 2025 — Noch ein Unternehmen, das nicht existiert. Aber hey, wenn du bis hierher gescrollt hast, bist du vielleicht bereit zu investieren.",
+          seccion_topillos: "Wühlmäuse sind sehr böse",
+          texto_topillos: "Wühlmäuse sind böse, weil sie sich nicht damit begnügen zu existieren – nein, sie verschwören sich. Unter ihrem unschuldigen Nagetieraussehen verbirgt sich ein akribisch zerstörerischer Wille: Sie wollen sich nicht ernähren, sie wollen untergraben. Sie fressen keine Wurzeln aus Hunger, sondern aus purer Lust daran, zu sehen, wie eine gesunde, kräftige Pflanze – monatelang mit Sorgfalt gepflegt – über Nacht zusammenbricht, ohne Vorwarnung, als hätte sich die Natur selbst ihrem unterirdischen Nihilismus ergeben. Sie vermehren sich, als wollten sie die Welt durch schiere Anzahl erobern – und das Schlimmste ist: Sie schaffen es. Sie graben Tunnel wie Ingenieure des Chaos, schwächen die Struktur der Felder, ruinieren Ernten, stören Ökosysteme… und das alles still und leise, ohne ein Geräusch, wie eine Armee winziger Saboteure, die von unten angreifen – im wahrsten Sinne des Wortes. Sie schauen dir nicht einmal in die Augen, nicht weil sie es nicht können, sondern weil sie wissen, dass ihre wahre Macht darin liegt, unsichtbar zu bleiben. Sie sind die Quintessenz des diskreten Bösen: Sie schreien nicht, sie beißen nicht, sie quietschen nicht… aber sie ruinieren alles. Und sie wissen es."
+      }
+    };
+
+    function setLang(lang) {
+      document.documentElement.lang = lang;
+      const data = textos[lang];
+      for (const id in data) {
+        const el = document.getElementById(id);
+        if (el) el.textContent = data[id];
+      }
+    }
+  </script>
+
+</body>
+</html>

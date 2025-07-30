@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Otra landing más</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/sakura.css/css/sakura.css" type="text/css">
+  <style>
+    .flags {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .flags img {
+      width: 32px;
+      height: auto;
+      cursor: pointer;
+    }
+
+    .contenido {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: start;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+
+    .texto {
+      flex: 1 1 300px;
+    }
+
+    .imagen {
+      flex: 1 1 200px;
+      max-width: 200px;
+    }
+
+    #melocontoncito{
+      font-size: 14rem;
+    }
+
+    footer {
+      margin-top: 4rem;
+      font-size: 0.9rem;
+      text-align: center;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="flags">
+    <img src="https://flagcdn.com/w40/es.png" alt="Español" onclick="setLang('es')">
+    <img src="https://flagcdn.com/w40/gb.png" alt="English" onclick="setLang('en')">
+  </div>
+
+  <main>
+    <h1 id="titulo">Bienvenido a otra landing page</h1>
+    <h2 id="subtitulo">Diseñada con mimo... en 1 minuto</h2>
+
+    <div class="contenido">
+      <div class="texto">
+        <p id="parrafo">
+          He aquí oooooootra landing page. Sí, otra más. Con su título grande, su párrafo perfectamente alineado y un aire de importancia que ni un ministro. No hay nada nuevo, nada rompedor, pero oye, ¡mira qué limpio todo! Porque lo importante no es lo que ofrece, sino que tenga ese aire de "esto podría ser una startup". A veces menos es más, pero aquí menos es... exactamente igual que todas las demás.
+        </p>
+      </div>
+
+      <div class="imagen">
+        <p id="melocontoncito">🍑</p>
+      </div>
+    </div>
+  </main>
+
+  <footer id="footer">
+    © 2025 — Otra empresa que no existe. Pero oye, si has llegado hasta aquí, igual te interesa invertir.
+  </footer>
+
+  <script>
+    function setLang(lang) {
+      const titulo = document.getElementById('titulo');
+      const subtitulo = document.getElementById('subtitulo');
+      const parrafo = document.getElementById('parrafo');
+      const footer = document.getElementById('footer');
+      const doc = document.documentElement;
+
+      if (lang === 'en') {
+        doc.lang = 'en';
+        titulo.textContent = "Welcome to yet another landing page";
+        subtitulo.textContent = "Lovingly crafted... in 1 minute";
+        parrafo.textContent = "Here we are again. Another landing page. Yes, yet another one. With its oversized heading, perfectly aligned paragraph and a self-important tone that screams ‘minimalist disruption’. There’s nothing new, nothing bold, but hey, look how clean it is! Because the goal isn’t originality — it’s to feel like maybe, just maybe, this could be a startup. Sometimes less is more, but here less is... exactly the same as always.";
+        footer.textContent = "© 2025 — Another company that doesn’t exist. But hey, if you scrolled this far, maybe you're ready to invest.";
+      } else {
+        doc.lang = 'es';
+        titulo.textContent = "Bienvenido a otra landing page";
+        subtitulo.textContent = "Diseñada con mimo... en 1 minuto";
+        parrafo.textContent = "He aquí oooooootra landing page. Sí, otra más. Con su título grande, su párrafo perfectamente alineado y un aire de importancia que ni un ministro. No hay nada nuevo, nada rompedor, pero oye, ¡mira qué limpio todo! Porque lo importante no es lo que ofrece, sino que tenga ese aire de \"esto podría ser una startup\". A veces menos es más, pero aquí menos es... exactamente igual que todas las demás.";
+        footer.textContent = "© 2025 — Otra empresa que no existe. Pero oye, si has llegado hasta aquí, igual te interesa invertir.";
+      }
+    }
+  </script>
+
+</body>
+</html>

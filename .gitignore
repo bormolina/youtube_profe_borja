@@ -1,0 +1,42 @@
+# ---- Python ----
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pycache
+*.egg-info/
+
+# ---- Entornos virtuales ----
+.venv/
+env/
+venv/
+
+# ---- Archivos temporales ----
+*.log
+*.tmp
+*.temp
+
+# ---- Sistema ----
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---- Docker ----
+# Volúmenes y datos persistentes
+docker-data/
+*.pid
+
+# ---- Archivos del proyecto que no queremos versionar ----
+# Carpeta donde guardas las descargas de yt-dlp
+descargas/
+downloads/
+
+# Script yt-dlp (si no quieres subirlo)
+yt-dlp
+yt-dlp.exe
+yt-dlp.py
+
+# ---- IDEs / Editores ----
+.vscode/
+.idea/
+*.swp

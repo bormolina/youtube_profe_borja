@@ -1,0 +1,10 @@
+services:
+  flask:
+    build: .
+    ports:
+      - "5001:5000"
+    volumes:
+      - .:/app
+    # Para terne acceso a la terminal del contenedor
+    stdin_open: true
+    tty: true

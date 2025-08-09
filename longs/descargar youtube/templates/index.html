@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BorTube - Descargar de Youtube</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/sakura.css/css/sakura-dark.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilos.css') }}"></head>
+<body>
+    <h1>BorTube</h1>
+    <h2>Youtube Downloader</h2>
+    <form action="/descargar-file" method="POST">
+        <label>URL:
+            <input type="text" name="url" required>
+        </label>
+        <br>
+
+        <label>Formato:
+            <select name="formato" required>   
+            <option value="mp4">mp4</option>
+            <option value="mp3">mp3</option>
+            </select>
+        </label>
+        <br>
+
+        <label>Partes:
+            <input type="text" name="partes" placeholder="e.g.:00:12:15-00:15:00, 01:10:10-01:10:50">
+        </label>
+        <br><br>
+
+        <button type="submit">Descargar</button>
+    </form>
+</body>
+</html>
+

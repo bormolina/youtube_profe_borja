@@ -1,0 +1,46 @@
+
+:root {
+  --bg: #0b0f0c;
+  --fg: #cfe8cf;
+  --muted: #88c488;
+  --accent: #39ff14; /* verde Matrix */
+}
+
+html, body { 
+  background: var(--bg); 
+  color: var(--fg); 
+}
+
+h1 {
+  color: var(--accent);
+  text-align: center;
+}
+
+a, a:visited { color: var(--accent); }
+
+input, select, textarea { 
+  background: #0f1511; 
+  color: var(--fg); 
+  border-color: #204b2a; 
+}
+
+button, input[type="submit"] { 
+  background: var(--accent); 
+  color: #061106; 
+  border: none; 
+  font-size: 2.2rem;       /* más grande */
+  padding: 0.6rem 1.2rem;  /* más espacio */
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover, input[type="submit"]:hover { 
+  filter: brightness(1.1); 
+}
+
+::selection { 
+  background: rgba(57,255,20,.35); 
+  color: #061106; 
+}
+
+hr { border-color: #204b2a; }
